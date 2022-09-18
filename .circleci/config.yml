@@ -183,7 +183,7 @@ jobs:
             apk add --update tar gzip ansible nodejs npm
             pip install awscli
       - run:
-          name: Configure server
+          name: Configure servers
           command: |
             cd .circleci/ansible
             ansible-playbook -i inventory.txt configure-server.yml
