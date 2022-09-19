@@ -197,6 +197,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install dependencies
+          command: |
+            sudo apt-get install -y python3-pip
+            sudo pip3 install awscli
+      - run:
           name: Run migrations
           command: |
             cd backend
